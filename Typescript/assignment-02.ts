@@ -43,9 +43,10 @@ console.log("Array multiplied by 2 : ", newArray);
 
 let fruits: string[] = ["apple", "banana", "cherry", "date", "grape"];
 
-function removeFruits(arr: string) {
+function removeFruits(arr: string[]) {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i].length > 5) arr.slice(i, 1);
     }
+    return arr;//at first there was an error bcz function was not returning anything and on line 52 it was saying void can't be stored in string[]
 }
-let newArray: string[] = removeFruits(fruits);
+let newArray1: string[] = removeFruits(fruits);
