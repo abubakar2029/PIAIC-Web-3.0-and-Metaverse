@@ -1,14 +1,14 @@
 {
-  "name": "typescript",
+  "name": "assignment-3",
   "version": "1.0.0",
-  "description": "\"Learning Typescript\"",
+  "description": "\"Solving a Large TypeScript Assignment\"",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "Typescript"
+    "Typescrit"
   ],
-  "author": "AbuBakar",
+  "author": "Abu Bakar",
   "license": "ISC"
 }
