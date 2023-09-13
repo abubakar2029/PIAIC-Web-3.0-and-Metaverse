@@ -3,7 +3,7 @@
 
 
  */
-/* Q No.1
+/*1
 - Develop a program that calculates and prints the sum of the first n even numbers using a for loop.
 */
 console.log("============Question 1");
@@ -18,7 +18,7 @@ for (let i = 0;; i++) {
     }
 }
 console.log("First N even numbers = ", evenNumbers);
-/* Q No.2
+/*2
 - Implement a program that uses a for loop to iterate through an array of numbers and print only the even numbers.
 */
 console.log("============Question 2");
@@ -30,7 +30,7 @@ for (let i = 0; i < randomNumbers1.length; i++) {
     }
 }
 console.log("Even numbers from array = ", evenArr);
-/* Q No.3
+/*3
 - Implement a program that uses a loop to iterate through an array of numbers and remove all the even numbers from them and just leave the odd ones
 */
 console.log("============Question 3");
@@ -43,16 +43,17 @@ while (i <= randomNumbers2.length) {
     i++;
 }
 console.log("Array with odd Numbers = ", randomNumbers2);
-/* Q No.4
+/*4
 - Write a program that defines a function to calculate the area of a circle. The function should take the radius as input and return the calculated area.
 */
 console.log("============Question 4");
-// let radius: number = prompt("Enter radius of circle");
+let radius = Number(prompt("Enter radius of circle"));
 function calculateArea(radius) {
     return (Math.PI * Math.pow(radius, 2));
 }
-// let area = calculateArea(radius);
-/* Q No.5
+let area = calculateArea(radius);
+console.log(area);
+/*5
  - Develop a program that reads a list of grades and uses the splice method to remove failing grades (below 50) from the array.
 */
 console.log("============Question 5");
@@ -75,7 +76,7 @@ function checkGrades(grades) {
     console.log("Passed Subjects = ", grades);
 }
 checkGrades(grades);
-/* Q No.6
+/*6
  - Write a program that uses a function to find the largest element in an array of numbers.
 */
 console.log("============Question 6");

@@ -1,6 +1,6 @@
+"use strict";
 /*
 
-Given an array of strings ["apple", "banana", "cherry", "date", "grape"], use the filter method to create a new array containing only the fruits with more than 5 characters.
 
 Given an array of numbers [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], use the map and filter methods together to create a new array containing the squares of even numbers.
 
@@ -12,12 +12,12 @@ Given an array of numbers [3, 6, 9, 12, 15, 18], use the map and filter methods 
 
 
 Given an array of names ["Alice", "Bob", "Charlie", "David", "Emily"], use the forEach method to log each name with an exclamation mark at the end, e.g., "Alice!".
- */
+*/
 /* Write a program that uses filter to remove all negative numbers from an array of numbers */
-var numbersArray = [-3, 17, 9, -12, 14, -5, 10, -1, 8, 6, -4, 11, -7, 5, 2, -13, 16, -9, 18, 3];
+let numbersArray = [-3, 17, 9, -12, 14, -5, 10, -1, 8, 6, -4, 11, -7, 5, 2, -13, 16, -9, 18, 3];
 function removeNegative(arr) {
-    var temp = [];
-    for (var i = 0; i < arr.length; i++) {
+    let temp = [];
+    for (let i = 0; i < arr.length; i++) {
         if (arr[i] < 0) {
             arr.splice(i, 1);
             i--;
@@ -26,10 +26,21 @@ function removeNegative(arr) {
     return temp;
 }
 removeNegative(numbersArray);
-console.log(numbersArray);
+console.log("Array without negative numbers : ", numbersArray);
 /* Given an array of numbers [1, 2, 3, 4, 5], use the map method to create a new array where each number is multiplied by 2. */
-var givenArray = [1, 2, 3, 4, 5];
-var newArray = givenArray.map(function (element) {
+let givenArray = [1, 2, 3, 4, 5];
+let newArray = givenArray.map((element) => {
     return element * 2;
 });
-console.log(newArray);
+console.log("Array multiplied by 2 : ", newArray);
+/* Given an array of strings ["apple", "banana", "cherry", "date", "grape"], use the filter method to create a new array containing only the fruits with more than 5 characters.
+ */
+let fruits = ["apple", "banana", "cherry", "date", "grape"];
+function removeFruits(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length > 5)
+            arr.slice(i, 1);
+    }
+    return arr; //at first there was an error bcz function was not returning anything and on line 52 it was saying void can't be stored in string[]
+}
+let newArray1 = removeFruits(fruits);

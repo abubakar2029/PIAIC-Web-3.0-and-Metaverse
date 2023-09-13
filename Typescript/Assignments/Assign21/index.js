@@ -14,4 +14,6 @@ class car {
     }
 }
 let myCar = new car("Honda", 14, "Blue");
-console.log(myCar.getAge(2014));
+console.log("-------------------------");
+console.log("Car Age\t", myCar.getAge(2014));
+/* \t creates an empty space tab */

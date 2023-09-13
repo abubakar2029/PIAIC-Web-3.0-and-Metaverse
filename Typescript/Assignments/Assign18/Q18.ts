@@ -13,7 +13,7 @@ let alphabaticalOrder: string[] = favouritePlaces;
 
 for (let i = 0; i < alphabaticalOrder.length; i++) {
     for (let j = i + 1; j < alphabaticalOrder.length; j++) {
-        if (alphabaticalOrder[j] < alphabaticalOrder[i]) { /* A>B==true */
+        if (alphabaticalOrder[j] < alphabaticalOrder[i]) { 
             // Swap the elements
             let temp = alphabaticalOrder[i];
             alphabaticalOrder[i] = alphabaticalOrder[j];
