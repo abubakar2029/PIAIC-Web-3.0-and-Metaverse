@@ -1,3 +1,8 @@
+// WHEN WE HAVE TO PRINT FIXED DATA LIKE WEEKDAYS COLORS etc
+// WHEN WE NEED FIXED INDEXES
+// VALUES THAT WE CAN USE THROUGHOUT THE APP
+// COMPARISON WILL ALSO BE FASTER
+// USERrOLE=> ADMIN,USER
 enum Direction {
     Up = 1,
     Down,
@@ -18,7 +23,7 @@ for (const key in Direction) {
 /* ------------------------------- */
 
 enum FileAccess {
-// constant members
+    // constant members
     None,
     Read = 1 << 1,
     Write = 1 << 2,
@@ -52,7 +57,7 @@ interface Cat {
     color: string;
 }
 
-let myPet: Dog | Cat;
+let myPet: Dog;
 
 // Correct usage:
 myPet = {
@@ -62,10 +67,10 @@ myPet = {
 };
 
 // Incorrect usage (will result in a type error):
-myPet = {
-    type: AnimalType.Cat,
-    name: "Whiskers",
-    color: "Tabby",
-};
+// myPet = {
+//     type: AnimalType.Cat,
+//     name: "Whiskers",
+//     color: "Tabby",
+// };
 console.log("Enum_member_as_types", myPet.type);
 

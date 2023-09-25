@@ -1,3 +1,4 @@
+// interface is purely for objects can't be use for scalar types    
 // type Person2 = {
 //     name: string
 //     age: number

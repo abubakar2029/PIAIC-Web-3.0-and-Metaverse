@@ -1,4 +1,9 @@
 "use strict";
+// WHEN WE HAVE TO PRINT FIXED DATA LIKE WEEKDAYS COLORS etc
+// WHEN WE NEED FIXED INDEXES
+// VALUES THAT WE CAN USE THROUGHOUT THE APP
+// COMPARISON WILL ALSO BE FASTER
+// USERrOLE=> ADMIN,USER
 var Direction;
 (function (Direction) {
     Direction[Direction["Up"] = 1] = "Up";
@@ -9,12 +14,14 @@ var Direction;
 for (const key in Direction) {
     console.log(key, '=', Direction[key]);
 }
+/* ------------------------------- */
 /* enums without initializers either need to be first, or have to come after numeric enums initialized with numeric constants or other constant enum members */
-// In other words, the following isn’t allowed:
+// the following isn’t allowed:
 // enum E {
 //     A = getSomeValue(),
 //     B,
 // }
+/* ------------------------------- */
 var FileAccess;
 (function (FileAccess) {
     // constant members
@@ -25,11 +32,14 @@ var FileAccess;
     // computed member
     FileAccess[FileAccess["G"] = "123".length] = "G";
 })(FileAccess || (FileAccess = {}));
+/* ------------------------------- */
 /*   It is a compile time error for constant enum expressions to be evaluated to NaN or Infinity. */
 var ExampleEnum;
 (function (ExampleEnum) {
     ExampleEnum[ExampleEnum["Value1"] = Infinity] = "Value1";
 })(ExampleEnum || (ExampleEnum = {}));
+/* ------------------------------- */
+/* ENUM MEMBER AS TYPES */
 var AnimalType;
 (function (AnimalType) {
     AnimalType[AnimalType["Dog"] = 0] = "Dog";
@@ -43,9 +53,9 @@ myPet = {
     breed: "Golden Retriever",
 };
 // Incorrect usage (will result in a type error):
-myPet = {
-    type: AnimalType.Cat,
-    name: "Whiskers",
-    color: "Tabby",
-};
-console.log("Aho", myPet.type);
+// myPet = {
+//     type: AnimalType.Cat,
+//     name: "Whiskers",
+//     color: "Tabby",
+// };
+console.log("Enum_member_as_types", myPet.type);
